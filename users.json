@@ -1,0 +1,273 @@
+[
+  {
+    "id": "user_2esutisKIUesDpQjYkTTsnNnZzh",
+    "object": "user",
+    "username": "ravilla",
+    "first_name": "Siddhartha",
+    "last_name": "Ravilla",
+    "image_url": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18yZXJzQ2Z2YUprTnpJelpLY1NrWmtCWlRKUXUiLCJyaWQiOiJ1c2VyXzJlc3V0aXNLSVVlc0RwUWpZa1RUc25Oblp6aCIsImluaXRpYWxzIjoiU1IifQ",
+    "has_image": false,
+    "primary_email_address_id": "idn_2esup1JIrMdvI9Q4wEqjY63OFG3",
+    "primary_phone_number_id": null,
+    "primary_web3_wallet_id": null,
+    "password_enabled": true,
+    "two_factor_enabled": false,
+    "totp_enabled": false,
+    "backup_code_enabled": false,
+    "email_addresses": [
+      {
+        "id": "idn_2esup1JIrMdvI9Q4wEqjY63OFG3",
+        "object": "email_address",
+        "email_address": "ravilla.si@northeastern.edu",
+        "reserved": false,
+        "verification": {
+          "status": "verified",
+          "strategy": "email_code",
+          "attempts": 1,
+          "expire_at": 1712706386516
+        },
+        "linked_to": [],
+        "created_at": 1712705785782,
+        "updated_at": 1712705822102
+      }
+    ],
+    "phone_numbers": [],
+    "web3_wallets": [],
+    "passkeys": [],
+    "external_accounts": [],
+    "saml_accounts": [],
+    "public_metadata": {},
+    "private_metadata": {},
+    "unsafe_metadata": {},
+    "external_id": null,
+    "last_sign_in_at": 1712705822081,
+    "banned": false,
+    "locked": false,
+    "lockout_expires_in_seconds": null,
+    "verification_attempts_remaining": 100,
+    "created_at": 1712705822072,
+    "updated_at": 1712705822128,
+    "delete_self_enabled": true,
+    "create_organization_enabled": true,
+    "last_active_at": 1712872240662,
+    "profile_image_url": "https://www.gravatar.com/avatar?d=mp"
+  },
+  {
+    "id": "user_2es8iJtPchbkc9akjVgQZOQmgGB",
+    "object": "user",
+    "username": null,
+    "first_name": "Akash's Newsletter",
+    "last_name": null,
+    "image_url": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yZXM4aUxaczlMUmxwQTc2SG9tQnlQRkNyMU0ifQ",
+    "has_image": true,
+    "primary_email_address_id": "idn_2es8iGqQDJvmRTLubKv8a4oSt1D",
+    "primary_phone_number_id": null,
+    "primary_web3_wallet_id": null,
+    "password_enabled": false,
+    "two_factor_enabled": false,
+    "totp_enabled": false,
+    "backup_code_enabled": false,
+    "email_addresses": [
+      {
+        "id": "idn_2es8iGqQDJvmRTLubKv8a4oSt1D",
+        "object": "email_address",
+        "email_address": "akashsnewsletter@gmail.com",
+        "reserved": false,
+        "verification": {
+          "status": "verified",
+          "strategy": "from_oauth_google",
+          "attempts": null,
+          "expire_at": null
+        },
+        "linked_to": [
+          {
+            "type": "oauth_google",
+            "id": "idn_2es8iKTVA4x7g8195zRruwe1aNu"
+          }
+        ],
+        "created_at": 1712682050477,
+        "updated_at": 1712682050606
+      }
+    ],
+    "phone_numbers": [],
+    "web3_wallets": [],
+    "passkeys": [],
+    "external_accounts": [
+      {
+        "object": "google_account",
+        "id": "idn_2es8iKTVA4x7g8195zRruwe1aNu",
+        "google_id": "101439217384062149766",
+        "approved_scopes": "email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid profile",
+        "email_address": "akashsnewsletter@gmail.com",
+        "given_name": "Akash's Newsletter",
+        "family_name": "",
+        "picture": "https://lh3.googleusercontent.com/a/ACg8ocKTul5hPXjxS54C97HSEKtBGEXCwNmmhp8GX0O8V5RO3-9yHQ=s1000-c",
+        "username": null,
+        "public_metadata": {},
+        "label": null,
+        "created_at": 1712682050436,
+        "updated_at": 1712682050436,
+        "verification": {
+          "status": "verified",
+          "strategy": "oauth_google",
+          "attempts": null,
+          "expire_at": 1712682644134
+        }
+      }
+    ],
+    "saml_accounts": [],
+    "public_metadata": {},
+    "private_metadata": {},
+    "unsafe_metadata": {},
+    "external_id": null,
+    "last_sign_in_at": 1712682413675,
+    "banned": false,
+    "locked": false,
+    "lockout_expires_in_seconds": null,
+    "verification_attempts_remaining": 100,
+    "created_at": 1712682050561,
+    "updated_at": 1712682437268,
+    "delete_self_enabled": true,
+    "create_organization_enabled": true,
+    "last_active_at": 1712682050559,
+    "profile_image_url": "https://images.clerk.dev/oauth_google/img_2es8iLZs9LRlpA76HomByPFCr1M"
+  },
+  {
+    "id": "user_2erx0eXUNkyXfVy2xzfOko2s6GM",
+    "object": "user",
+    "username": null,
+    "first_name": null,
+    "last_name": null,
+    "image_url": "https://img.clerk.com/eyJ0eXBlIjoiZGVmYXVsdCIsImlpZCI6Imluc18yZXJzQ2Z2YUprTnpJelpLY1NrWmtCWlRKUXUiLCJyaWQiOiJ1c2VyXzJlcngwZVhVTmt5WGZWeTJ4emZPa28yczZHTSJ9",
+    "has_image": false,
+    "primary_email_address_id": "idn_2erwyQHS0UFqGlGZ96xcoH15d5l",
+    "primary_phone_number_id": null,
+    "primary_web3_wallet_id": null,
+    "password_enabled": true,
+    "two_factor_enabled": false,
+    "totp_enabled": false,
+    "backup_code_enabled": false,
+    "email_addresses": [
+      {
+        "id": "idn_2erwyQHS0UFqGlGZ96xcoH15d5l",
+        "object": "email_address",
+        "email_address": "akashvarunpv@gmail.com",
+        "reserved": false,
+        "verification": {
+          "status": "verified",
+          "strategy": "email_code",
+          "attempts": 1,
+          "expire_at": 1712676859515
+        },
+        "linked_to": [],
+        "created_at": 1712676258755,
+        "updated_at": 1712676276345
+      }
+    ],
+    "phone_numbers": [],
+    "web3_wallets": [],
+    "passkeys": [],
+    "external_accounts": [],
+    "saml_accounts": [],
+    "public_metadata": {},
+    "private_metadata": {},
+    "unsafe_metadata": {},
+    "external_id": null,
+    "last_sign_in_at": 1712868901682,
+    "banned": false,
+    "locked": false,
+    "lockout_expires_in_seconds": null,
+    "verification_attempts_remaining": 100,
+    "created_at": 1712676276323,
+    "updated_at": 1712869579874,
+    "delete_self_enabled": true,
+    "create_organization_enabled": true,
+    "last_active_at": 1712868901729,
+    "profile_image_url": "https://www.gravatar.com/avatar?d=mp"
+  },
+  {
+    "id": "user_2erw3XN38SBL56rztFJdD5fHtau",
+    "object": "user",
+    "username": null,
+    "first_name": "Akash",
+    "last_name": "Varun",
+    "image_url": "https://img.clerk.com/eyJ0eXBlIjoicHJveHkiLCJzcmMiOiJodHRwczovL2ltYWdlcy5jbGVyay5kZXYvb2F1dGhfZ29vZ2xlL2ltZ18yZXJ3M1VYbUZXVWx6OG5sRkpYU3RqaFZza20ifQ",
+    "has_image": true,
+    "primary_email_address_id": "idn_2erw3XwYYrhxlS5Ki3Y3UBsntL9",
+    "primary_phone_number_id": null,
+    "primary_web3_wallet_id": null,
+    "password_enabled": false,
+    "two_factor_enabled": false,
+    "totp_enabled": false,
+    "backup_code_enabled": false,
+    "email_addresses": [
+      {
+        "id": "idn_2erw3XwYYrhxlS5Ki3Y3UBsntL9",
+        "object": "email_address",
+        "email_address": "akashvarunp@gmail.com",
+        "reserved": false,
+        "verification": {
+          "status": "verified",
+          "strategy": "from_oauth_google",
+          "attempts": null,
+          "expire_at": null
+        },
+        "linked_to": [
+          {
+            "type": "oauth_google",
+            "id": "idn_2erw3V8mW0PbUCNBwY44Yj434Yn"
+          }
+        ],
+        "created_at": 1712675805631,
+        "updated_at": 1712675805686
+      }
+    ],
+    "phone_numbers": [],
+    "web3_wallets": [],
+    "passkeys": [],
+    "external_accounts": [
+      {
+        "object": "google_account",
+        "id": "idn_2erw3V8mW0PbUCNBwY44Yj434Yn",
+        "google_id": "114072280383620182630",
+        "approved_scopes": "email https://www.googleapis.com/auth/userinfo.email https://www.googleapis.com/auth/userinfo.profile openid profile",
+        "email_address": "akashvarunp@gmail.com",
+        "given_name": "Akash",
+        "family_name": "Varun",
+        "picture": "https://lh3.googleusercontent.com/a/ACg8ocI9V-ofpfJ8xiS9_fGd7RvNz4WuXFfWuR-xTckayyPZnBC_fg=s1000-c",
+        "username": "",
+        "public_metadata": {},
+        "label": null,
+        "created_at": 1712675805619,
+        "updated_at": 1712870265121,
+        "verification": {
+          "status": "verified",
+          "strategy": "oauth_google",
+          "attempts": null,
+          "expire_at": 1712676401150,
+          "error": {
+            "code": "external_account_missing_refresh_token",
+            "message": "Missing refresh token",
+            "long_message": "We cannot refresh your OAuth access token because the server didn't provide a refresh token. Please re-connect your account."
+          }
+        }
+      }
+    ],
+    "saml_accounts": [],
+    "public_metadata": {},
+    "private_metadata": {},
+    "unsafe_metadata": {},
+    "external_id": null,
+    "last_sign_in_at": 1712870265173,
+    "banned": false,
+    "locked": false,
+    "lockout_expires_in_seconds": null,
+    "verification_attempts_remaining": 100,
+    "created_at": 1712675805657,
+    "updated_at": 1712870265211,
+    "delete_self_enabled": true,
+    "create_organization_enabled": true,
+    "last_active_at": 1712863661243,
+    "profile_image_url": "https://images.clerk.dev/oauth_google/img_2erw3UXmFWUlz8nlFJXStjhVskm"
+  }
+]
