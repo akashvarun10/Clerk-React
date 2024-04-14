@@ -1,25 +1,57 @@
-  import React from 'react';
-  import ReactDOM from 'react-dom';
-  import { ClerkProvider } from '@clerk/clerk-react';
-  import { BrowserRouter, Route, Routes } from 'react-router-dom';
-  import App from './App';
-  import Layout from './components/Layout';
-  import NoMatch from './components/NoMatch';
+  // import React from 'react';
+  // import ReactDOM from 'react-dom';
+  // import { ClerkProvider } from '@clerk/clerk-react';
+  // import { BrowserRouter, Route, Routes } from 'react-router-dom';
+  // import App from './App';
+  // import Layout from './components/Layout';
+  // import NoMatch from './components/NoMatch';
 
-  const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string;
+  // const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string;
 
-  ReactDOM.render(
-    <React.StrictMode>
-      <ClerkProvider publishableKey={publishableKey}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Layout />}>
-              <Route index element={<App />} />
-            </Route>
-            <Route path="*" element={<NoMatch />} />
-          </Routes>
-        </BrowserRouter>
-      </ClerkProvider>
-    </React.StrictMode>,
-    document.getElementById('root')
-  );
+  // ReactDOM.render(
+  //   <React.StrictMode>
+  //     <ClerkProvider publishableKey={publishableKey}>
+  //       <BrowserRouter>
+  //         <Routes>
+  //           <Route path="/" element={<Layout />}>
+  //             <Route index element={<App />} />
+  //           </Route>
+  //           <Route path="*" element={<NoMatch />} />
+  //         </Routes>
+  //       </BrowserRouter>
+  //     </ClerkProvider>
+  //   </React.StrictMode>,
+  //   document.getElementById('root')
+  // );
+
+
+  // index.js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { ClerkProvider } from '@clerk/clerk-react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import App from './App';
+import Layout from './components/Layout';
+import NoMatch from './components/NoMatch';
+import HelloWorld from './components/HelloWorld';
+import Places from './components/Places';
+
+const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string;
+
+ReactDOM.render(
+  <React.StrictMode>
+    <ClerkProvider publishableKey={publishableKey}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<App />} />
+            <Route path="helloworld" element={<HelloWorld />} />
+            <Route path="places" element={<Places />} />
+          </Route>
+          <Route path="*" element={<NoMatch />} />
+        </Routes>
+      </BrowserRouter>
+    </ClerkProvider>
+  </React.StrictMode>,
+  document.getElementById('root')
+);
