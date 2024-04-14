@@ -28,7 +28,7 @@ async function fetchUsers() {
             firstName: user.first_name,
             lastName: user.last_name,
             phoneNumber: user.phone_number,
-            email: user.email
+            email: user.email_addresses[0].email_address
         }));
 
         console.log("Users have been successfully fetched from Clerk API.");
