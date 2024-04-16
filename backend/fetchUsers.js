@@ -1,6 +1,6 @@
 // fetchUsers.js
 import fetch from 'node-fetch';
-import { insertUsers } from './dbOperations.js';
+import { updateUsers } from './dbOperations.js';
 import dotenv from 'dotenv';
 
 dotenv.config({path: '../.env.local'});
