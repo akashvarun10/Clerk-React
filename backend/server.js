@@ -96,10 +96,6 @@
 //   }
 // });
 
-// // Server listening
-// const PORT = process.env.PORT || 5000;
-// app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
-
 
 import express from 'express';
 import mongoose from 'mongoose';
@@ -107,31 +103,32 @@ import cors from 'cors';
 
 const app = express();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
-// MongoDB connection
 mongoose.connect('mongodb+srv://pemmarajuv:dTNwtwcEdqy2IBcu@cluster0.z5f5zp3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('MongoDB connected successfully'))
   .catch(err => console.error('MongoDB connection error:', err));
 
-// Define a schema for the location
+// Updated schema to include additional user details
 const locationSchema = new mongoose.Schema({
   userId: { type: String, required: true, unique: true },
-  location: { type: String, required: true }
+  location: { type: String, required: true },
+  username: { type: String },
+  firstName: { type: String },
+  lastName: { type: String },
+  emailAddress: { type: String }
 });
 
-// Create a model from the schema
 const Location = mongoose.model('Location', locationSchema);
 
 // Routes
 app.post('/location', async (req, res) => {
-  const { userId, location } = req.body;
+  const { userId, location, username, firstName, lastName, emailAddress } = req.body;
   try {
     const updatedLocation = await Location.findOneAndUpdate(
       { userId },
-      { location },
+      { userId, location, username, firstName, lastName, emailAddress },
       { new: true, upsert: true }
     );
     res.status(200).json(updatedLocation);
@@ -154,6 +151,5 @@ app.get('/location/:userId', async (req, res) => {
   }
 });
 
-// Server listening
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
