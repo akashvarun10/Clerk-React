@@ -13,6 +13,7 @@ const LocationPage: React.FC = () => {
   const [selectedLocation, setSelectedLocation] = useState<google.maps.LatLngLiteral | null>(null);
   const [savedLocation, setSavedLocation] = useState('');
 
+
   // Load Google Maps script
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: 'AIzaSyALvS5oK04po7EP4eNSm82BM6uv4pMbrhE', // Replace with your actual API key
@@ -105,37 +106,6 @@ const LocationPage: React.FC = () => {
       setSaving(false);
     }
   };
-  // const handleSaveLocation = async () => {
-  //   if (!location) {
-  //     alert('Please enter a location');
-  //     return;
-  //   }
-
-  //   setSaving(true);
-  //   try {
-  //     const response = await fetch('http://localhost:3000/location', {
-  //       method: 'POST',
-  //       headers: {
-  //         'Content-Type': 'application/json',
-  //       },
-  //       body: JSON.stringify({ userId: user?.id, location })
-  //     });
-
-  //     if (response.ok) {
-  //       const data = await response.json();
-  //       setSavedLocation(data.location);
-  //       alert('Location saved successfully!');
-  //     } else {
-  //       throw new Error('Failed to save location');
-  //     }
-  //   } catch (error) {
-  //     console.error('Failed to save location', error);
-  //     alert('Failed to save location');
-  //   } finally {
-  //     setSaving(false);
-  //   }
-  // };
-
   return (
     <div>
       <Typography variant="h4">Enter Location</Typography>
@@ -178,3 +148,4 @@ const LocationPage: React.FC = () => {
 };
 
 export default LocationPage;
+

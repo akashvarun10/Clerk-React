@@ -7,6 +7,8 @@
 // import NoMatch from './components/NoMatch';
 // import HelloWorld from './components/HelloWorld';
 // import Places from './components/Places';
+// import LocationPage from './components/LocationPage'; // Import the LocationPage component
+
 
 // const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string;
 
@@ -19,6 +21,7 @@
 //             <Route index element={<App />} />
 //             <Route path="helloworld" element={<HelloWorld />} />
 //             <Route path="places" element={<Places />} />
+//             <Route path="location" element={<LocationPage />} /> {/* Add the LocationPage route */}
 //           </Route>
 //           <Route path="*" element={<NoMatch />} />
 //         </Routes>
@@ -38,26 +41,31 @@ import NoMatch from './components/NoMatch';
 import HelloWorld from './components/HelloWorld';
 import Places from './components/Places';
 import LocationPage from './components/LocationPage'; // Import the LocationPage component
+import { Provider } from 'react-redux'; // Import Provider from react-redux
+import { store } from './store'; // Import the Redux store
 
 const publishableKey = import.meta.env.VITE_CLERK_PUBLISHABLE_KEY as string;
 
 ReactDOM.render(
   <React.StrictMode>
     <ClerkProvider publishableKey={publishableKey}>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<App />} />
-            <Route path="helloworld" element={<HelloWorld />} />
-            <Route path="places" element={<Places />} />
-            <Route path="location" element={<LocationPage />} /> {/* Add the LocationPage route */}
-          </Route>
-          <Route path="*" element={<NoMatch />} />
-        </Routes>
-      </BrowserRouter>
+      <Provider store={store}> {/* Wrap the app with Provider and pass the Redux store */}
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<App />} />
+              <Route path="helloworld" element={<HelloWorld />} />
+              <Route path="places" element={<Places />} />
+              <Route path="location" element={<LocationPage />} /> {/* Add the LocationPage route */}
+            </Route>
+            <Route path="*" element={<NoMatch />} />
+          </Routes>
+        </BrowserRouter>
+      </Provider>
     </ClerkProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
+
 
 
