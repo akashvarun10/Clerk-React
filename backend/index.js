@@ -15,11 +15,11 @@ main().catch(error => {
     console.error('Unhandled error in initial run:', error);
 });
 
-setInterval(() => {
-    main().catch(error => {
-        console.error('Unhandled error during periodic synchronization:', error);
-    });
-}, 3600000); // 3600000 milliseconds = 1 hour
+// setInterval(() => {
+//     main().catch(error => {
+//         console.error('Unhandled error during periodic synchronization:', error);
+//     });
+// }, 3600000); // 3600000 milliseconds = 1 hour
 
 // index.js
 // import { fetchUsers } from './fetchUsers.js';
