@@ -3,6 +3,7 @@ import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { Button, CircularProgress, Typography, TextField, Box } from '@mui/material';
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom'; // Import useNavigate for routing
+import { useUser } from '@clerk/clerk-react';
 
 const PaymentForm: React.FC = () => {
   const stripe = useStripe();
@@ -13,6 +14,7 @@ const PaymentForm: React.FC = () => {
   const [showInfo, setShowInfo] = useState(true); // Initial state to show the introduction
   const [donationAmount, setDonationAmount] = useState('');
   const navigate = useNavigate(); // Initialize useNavigate
+  const { user } = useUser();
 
   const handleProceed = () => {
     setShowInfo(false); // Proceed directly to the payment form
@@ -46,8 +48,34 @@ const PaymentForm: React.FC = () => {
       setErrorMessage(error.message || 'An error occurred while processing your payment.');
     } else {
       console.log('Payment Method:', paymentMethod);
+      saveDonationToMongoDB(Number(donationAmount)); // Save donation details to MongoDB
       setLoading(false);
       setSuccess(true);
+    }
+  };
+
+  const saveDonationToMongoDB = async (amount: number) => {
+    try {
+      const userDetails = {
+        username: user?.username,
+        firstName: user?.firstName,
+        emailAddress: user?.emailAddresses[0]?.emailAddress,
+        donationAmount: amount,
+      };
+
+      const response = await fetch('http://localhost:3000/payment', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(userDetails)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to save donation');
+      }
+    } catch (error) {
+      console.error('Failed to save donation', error);
     }
   };
 
@@ -146,3 +174,20 @@ const ErrorMessage = styled(Box)({
 });
 
 export default PaymentForm;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
